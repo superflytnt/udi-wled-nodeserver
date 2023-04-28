@@ -19,5 +19,5 @@
 
 	<!-- Custom API Command --> 
 	<editor id="MCUSTOMAPI" nls="CUSTOM_API">
-    	<text required="false" />
+		<text required="false" />
 	</editor>
