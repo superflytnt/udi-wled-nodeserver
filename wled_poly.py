@@ -147,7 +147,7 @@ class WledNode(polyinterface.Node):
     def setOff(self, command):
         self.my_wled.turn_off()
         self.setDriver('ST', 0)
-        
+             
     def setBrightness(self, command):
         intBri = int(command.get('value'))
         self.my_wled.set_brightness(intBri)                                            
@@ -175,6 +175,16 @@ class WledNode(polyinterface.Node):
         self.setDriver('GV6', color_r)
         self.setDriver('GV7', color_g)
         self.setDriver('GV8', color_b)
+    
+    def setCustomAPI(self, command):
+	    api_command = command.get('value')
+	    # Make a request to the WLED device using the custom API command
+	    # (you may need to modify the following line depending on how the WLED library accepts custom API commands)
+	    response = self.my_wled.send_request(api_command)
+	    if response:
+	        LOGGER.info(f'Successfully sent custom API command: {api_command}')
+	    else:
+	        LOGGER.error(f'Failed to send custom API command: {api_command}')
     
     def setProfile(self, command):
         self.__saveEffetsList()
@@ -274,15 +284,18 @@ class WledNode(polyinterface.Node):
                {'driver': 'GV8', 'value': 0, 'uom': 100}]
     
     id = 'WLED'
+                
     commands = {
-                    'QUERY': query,            
-                    'DON': setOn,
-                    'DOF': setOff,
-                    'SET_PROFILE' : setProfile,
-                    'SET_BRI': setBrightness,
-                    'SET_EFFECT': setEffect,
-                    'SET_COLORID':setColor
-                }
+				    'QUERY': query,            
+				    'DON': setOn,
+				    'DOF': setOff,
+				    'SET_PROFILE': setProfile,
+				    'SET_BRI': setBrightness,
+				    'SET_EFFECT': setEffect,
+				    'SET_COLORID': setColor,
+				    'SET_CUSTOM_API': setCustomAPI 
+				}
+                
     
 if __name__ == "__main__":
     try:
