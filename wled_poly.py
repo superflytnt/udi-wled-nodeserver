@@ -187,7 +187,7 @@ class WledNode(udi_interface.Node):
         self.setDriver('GV6', color_r)
         self.setDriver('GV7', color_g)
         self.setDriver('GV8', color_b)
-
+    
     def setCustomAPI(self, command):
 	    api_command = command.get('value')
 	    # Make a request to the WLED device using the custom API command
@@ -197,7 +197,7 @@ class WledNode(udi_interface.Node):
 	        LOGGER.info(f'Successfully sent custom API command: {api_command}')
 	    else:
 	        LOGGER.error(f'Failed to send custom API command: {api_command}')
-        
+	        
     def setProfile(self, command):
         self.__saveEffetsList()
         self.__BuildProfile()
