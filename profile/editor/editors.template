@@ -16,3 +16,8 @@
     <editor id="MCOLOR">
         <range uom="100" min="0" max="255" step="1" prec="0" />
     </editor>
+
+	<!-- Custom API Command --> 
+	<editor id="MCUSTOMAPI" nls="CUSTOM_API">
+    	<text required="false" />
+	</editor>
