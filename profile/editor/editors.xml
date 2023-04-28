@@ -1,0 +1,23 @@
+<editors>
+    <!-- Bridge connected  -->
+    <editor id="bool">
+        <range uom="2" subset="0,1" />
+    </editor>
+
+    <editor id="MONOFF">
+        <range uom="78" subset="0,100" />
+    </editor>
+    
+    <!-- Brightness Editor -->
+    <editor id="MCLBRI">
+        <range uom="56" min="1" max="255" prec="0" step="1" />
+    </editor>
+    
+    <editor id="MCOLOR">
+        <range uom="100" min="0" max="255" step="1" prec="0" />
+    </editor>
+    
+    <!-- Custom API Command --> 
+    <editor id="MCUSTOMAPI" nls="CUSTOM_API">
+    	<text required="false" />
+    </editor>
