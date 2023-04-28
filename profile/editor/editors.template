@@ -18,6 +18,6 @@
     </editor>
     
     <!-- Custom API Command --> 
-	<editor id="MCUSTOMAPI" nls="CUSTOM_API">
-		<text required="false" />
-	</editor>
+    <editor id="MCUSTOMAPI" nls="CUSTOM_API">
+    	<text required="false" />
+    </editor>
