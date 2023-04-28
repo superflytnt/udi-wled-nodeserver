@@ -16,7 +16,7 @@
     </nodeDef>
     <nodeDef id="WLED" nls="MGR">
         <editors />
-        <sts> 
+        <sts>
         	<st id="CUSTOMAPI" editor="MCUSTOMAPI" /> <!-- Custom API Command -->
             <st id="ST" editor="MONOFF" />
             <st id="GV3" editor="MCLBRI" /> <!-- Brightness -->
